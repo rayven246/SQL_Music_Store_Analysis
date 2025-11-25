@@ -21,6 +21,7 @@ ORDER BY c DESC
 SELECT total 
 FROM invoice
 ORDER BY total DESC
+LIMIT 3;
 
 
 /* Q4: Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. 
@@ -54,7 +55,7 @@ Return your list ordered alphabetically by email starting with A. */
 
 /*Method 1 */
 
-SELECT DISTINCT email,first_name, last_name
+SELECT DISTINCT email, first_name, last_name, genre.name
 FROM customer
 JOIN invoice ON customer.customer_id = invoice.customer_id
 JOIN invoiceline ON invoice.invoice_id = invoiceline.invoice_id
@@ -228,3 +229,4 @@ ORDER BY 1;
 /* source: www.youtube.com/@RishabhMishraOfficial */
 
 /* Thank You :) */
+
